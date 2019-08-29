@@ -9,14 +9,14 @@ const { document } = new JSDOM(`
                 <input 
                     type="text" 
                     id="foo" 
-                    onfocus="() => console.log('foo input field - onfocus event handler is fired')" 
-                    onblur="() => console.log('foo input field - onblur event handler is fired')"  />
+                    onfocus="console.log('foo input field - onfocus event handler is fired')" 
+                    onblur="console.log('foo input field - onblur event handler is fired')"  />
 
                 <input 
                     type="text" 
                     id="bar" 
-                    onfocus="() => console.log('bar input field - onfocus event handler is fired')" 
-                    onblur="() => console.log('bar input field - onblur event handler is fired')"  />
+                    onfocus="console.log('bar input field - onfocus event handler is fired')" 
+                    onblur="console.log('bar input field - onblur event handler is fired')"  />
 `).window;
 
 getFooInputElement = () => document.getElementById("foo");
